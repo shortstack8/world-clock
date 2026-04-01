@@ -24,6 +24,19 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]",
     );
   }
+
+  //Auckland
+  let aucklandElement = document.querySelector("#auckland");
+  if (aucklandElement) {
+    let aucklandDateElement = aucklandElement.querySelector(".date");
+    let aucklandTimeElement = aucklandElement.querySelector(".time");
+    let aucklandTime = moment().tz("Pacific/Auckland");
+
+    aucklandDateElement.innerHTML = aucklandTime.format("MMMM Do YYYY");
+    aucklandTimeElement.innerHTML = aucklandTime.format(
+      "h:mm:ss [<small>]A[</small>]",
+    );
+  }
 }
 
 function updateCity(event) {
@@ -31,6 +44,7 @@ function updateCity(event) {
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
   }
+
   let cityTime = moment().tz(cityTimeZone);
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let citiesElement = document.querySelector("#cities");
@@ -41,11 +55,15 @@ function updateCity(event) {
         <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
       </div>
       <div class="time">${cityTime.format("h:mm:ss [<small>]A[</small>]")}</div>
-    </div>`;
+    </div>
+    
+    <a href="/">All cities</a>`;
 }
 
 updateTime();
-setInterval(updateCity, updateTime, 1000);
+setInterval(updateTime, 1000);
+clearInterval(updateTime);
+setInterval(updateCity, 1000);
 
 let citiesSelectElement = document.querySelector("#city-select");
 
