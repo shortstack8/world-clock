@@ -57,11 +57,11 @@ function updateCity(event) {
       <div class="time">${cityTime.format("h:mm:ss [<small>]A[</small>]")}</div>
     </div>
     
-    <a class="site-link" href="/">Back to all cities</a>`;
+    <a class="cities-link" href="/">Back to all cities</a>`;
 }
 
 updateTime();
-setInterval(updateTime, 1000);
+setInterval(updateTime, 1);
 
 let citiesSelectElement = document.querySelector("#city-select");
 

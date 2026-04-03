@@ -68,16 +68,23 @@ footer {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.site-link {
+.cities-link {
   color: #483d8b;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.github-link {
+  color: #b8860b;
   text-decoration: none;
   font-weight: bold;
 }
 
-.site-link:hover {
-  color: #b8860b;
+.github-link:hover {
+  color: #483d8b;
 }
 
 strong {
-  color: #b8860b;
+  color: #483d8b;
 }
