@@ -1,5 +1,5 @@
 body {
-  background-color: #f9f7fe;
+  background-color: #e6e6fa;
   font-family: sans-serif;
 }
 
@@ -7,12 +7,13 @@ h1 {
   text-align: center;
   font-family: sans-serif;
   font-size: 36px;
-  color: rosybrown;
+  color: #483d8b;
 }
 
 h2 {
   margin: 0 0 3px;
   font-size: 28px;
+  color: #b8860b;
 }
 
 select {
@@ -21,6 +22,7 @@ select {
   font-size: 18px;
   padding: 8px;
   border-radius: 4px;
+  border: 2px solid #483d8b;
 }
 
 .container {
@@ -37,7 +39,7 @@ select {
   margin: 20px 0;
   justify-content: space-between;
   padding: 20px 0;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+  border-bottom: 1px dashed rgb(72, 61, 139, 0.5);
 }
 
 .city:last-child {
@@ -51,6 +53,7 @@ select {
 .time {
   font-size: 48px;
   font-weight: bold;
+  opacity: 0.85;
 }
 
 .time small {
@@ -63,4 +66,18 @@ footer {
   text-align: center;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.8);
+}
+
+.site-link {
+  color: #483d8b;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.site-link:hover {
+  color: #b8860b;
+}
+
+strong {
+  color: #b8860b;
 }
